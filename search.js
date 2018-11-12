@@ -31,10 +31,10 @@ class Playlist{
             res = list[j].title < list[j+1].title;
             break;
           case 'date':
-            res = new Date(list[j].published) > new Date(list[j+1].published);
+            res = new Date(list[j].published) < new Date(list[j+1].published);
             break;
           case 'datedesc':
-            res = new Date(list[j].published) < new Date(list[j+1].published);
+            res = new Date(list[j].published) > new Date(list[j+1].published);
             break;
         }
         if (res) {
